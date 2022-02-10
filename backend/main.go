@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	cors "github.com/rs/cors/wrapper/gin"
@@ -18,7 +19,7 @@ func main() {
 	router.POST("/albums", postAlbums)
 	router.GET("/albums/:id", getAlbumByID)
 
-	router.Run("localhost:8080")
+	router.Run(os.Getenv("PORT"))
 }
 
 // album type has data about the record

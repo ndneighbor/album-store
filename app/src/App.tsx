@@ -79,7 +79,7 @@ function App() {
   const [isSubmitting, setSubmitting] = useState(false);
 
   function fetchData() {
-    fetch("http://127.0.0.1:8080/albums")
+    fetch("https://album-store-production.up.railway.app/albums")
       .then((response) => response.json())
       .then((data) => setData(data));
   }
@@ -113,7 +113,7 @@ function App() {
               price: 0,
             }}
             onSubmit={(values, actions) => {
-              fetch("http://127.0.0.1:8080/albums", {
+              fetch("https://album-store-production.up.railway.app/albums", {
                 method: "POST",
                 body: JSON.stringify({ id: "4", ...values }),
               });
