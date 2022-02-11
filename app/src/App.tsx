@@ -79,7 +79,7 @@ function App() {
   const [isSubmitting, setSubmitting] = useState(false);
 
   function fetchData() {
-    fetch("https://album-store-production.up.railway.app/albums")
+    fetch("https://punchy-blood-production.up.railway.app/albums")
       .then((response) => response.json())
       .then((data) => setData(data));
   }
@@ -113,7 +113,7 @@ function App() {
               price: 0,
             }}
             onSubmit={(values, actions) => {
-              fetch("https://album-store-production.up.railway.app/albums", {
+              fetch("https://punchy-blood-production.up.railway.app/albums", {
                 method: "POST",
                 body: JSON.stringify({ id: "4", ...values }),
               });
