@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ndneighbor/album-store/backend/models"
+	"github.com/ndneighbor/album-store/backend/pkg/models"
 )
 
 func (h handler) AddAlbum(w http.ResponseWriter, r *http.Request) {

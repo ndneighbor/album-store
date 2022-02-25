@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/ndneighbor/album-store/backend/models"
+	"github.com/ndneighbor/album-store/backend/pkg/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
