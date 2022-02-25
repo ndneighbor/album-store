@@ -4,6 +4,7 @@ go 1.17
 
 require (
 	github.com/gorilla/mux v1.8.0
+	github.com/rs/cors v1.8.2
 	gorm.io/driver/postgres v1.3.1
 	gorm.io/gorm v1.23.1
 )

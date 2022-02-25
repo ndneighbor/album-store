@@ -7,6 +7,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/ndneighbor/album-store/backend/pkg/db"
 	"github.com/ndneighbor/album-store/backend/pkg/handlers"
+	"github.com/rs/cors"
 )
 
 func main() {
@@ -20,6 +21,8 @@ func main() {
 	router.HandleFunc("/albums/{id}", h.UpdateAlbum).Methods(http.MethodPut)
 	router.HandleFunc("/albums/{id}", h.DeleteAlbum).Methods(http.MethodDelete)
 
+	handler := cors.Default().Handler(router)
+
 	log.Println("Your API is live!")
-	http.ListenAndServe(":4000", router)
+	log.Fatal(http.ListenAndServe(":4000", handler))
 }

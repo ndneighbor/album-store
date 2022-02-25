@@ -79,7 +79,7 @@ function App() {
   const [isSubmitting, setSubmitting] = useState(false);
 
   function fetchData() {
-    fetch("https://punchy-blood-production.up.railway.app/albums")
+    fetch("http://localhost:4000/albums")
       .then((response) => response.json())
       .then((data) => setData(data));
   }
@@ -113,9 +113,9 @@ function App() {
               price: 0,
             }}
             onSubmit={(values, actions) => {
-              fetch("https://punchy-blood-production.up.railway.app/albums", {
+              fetch("http://localhost:4000/albums", {
                 method: "POST",
-                body: JSON.stringify({ id: "4", ...values }),
+                body: JSON.stringify({ ...values }),
               });
               actions.setSubmitting(false);
               fetchData();
