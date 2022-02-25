@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/ndneighbor/album-store/backend/db"
-	"github.com/ndneighbor/album-store/backend/handlers"
+	"github.com/ndneighbor/album-store/backend/pkg/db"
+	"github.com/ndneighbor/album-store/backend/pkg/handlers"
 )
 
 func main() {

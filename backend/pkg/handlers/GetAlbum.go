@@ -7,7 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/ndneighbor/album-store/backend/models"
+	"github.com/ndneighbor/album-store/backend/pkg/models"
 )
 
 func (h handler) GetAlbum(w http.ResponseWriter, r *http.Request) {
